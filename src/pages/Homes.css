@@ -1,0 +1,121 @@
+/* Page Header */
+.homes-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.homes-header__title {
+  font-size: var(--font-size-4xl);
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-md);
+}
+
+.homes-header__subtitle {
+  font-size: var(--font-size-xl);
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-relaxed);
+}
+
+/* Intro */
+.homes-intro {
+  max-width: 800px;
+  margin: 0 auto var(--spacing-3xl);
+  text-align: center;
+  font-size: var(--font-size-lg);
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-relaxed);
+}
+
+/* Facilities Grid */
+.homes-facilities {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: var(--spacing-2xl);
+}
+
+/* Amenities */
+.homes-amenities {
+  text-align: center;
+}
+
+.homes-amenities__title {
+  font-size: var(--font-size-3xl);
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-3xl);
+}
+
+.homes-amenities__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--spacing-xl);
+  text-align: center;
+}
+
+.amenity-item h3 {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-sm);
+}
+
+.amenity-item p {
+  font-size: var(--font-size-base);
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-relaxed);
+  margin: 0;
+}
+
+/* Community Integration */
+.homes-community {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.homes-community h2 {
+  font-size: var(--font-size-3xl);
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-lg);
+}
+
+.homes-community p {
+  font-size: var(--font-size-base);
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-relaxed);
+  margin-bottom: var(--spacing-lg);
+}
+
+.homes-community ul {
+  list-style: none;
+  padding: 0;
+}
+
+.homes-community li {
+  padding-left: var(--spacing-lg);
+  margin-bottom: var(--spacing-md);
+  position: relative;
+  color: var(--color-text-secondary);
+}
+
+.homes-community li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--color-accent);
+  font-weight: bold;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .homes-header__title {
+    font-size: var(--font-size-3xl);
+  }
+
+  .homes-facilities {
+    grid-template-columns: 1fr;
+  }
+
+  .homes-amenities__grid {
+    grid-template-columns: 1fr;
+  }
+}
