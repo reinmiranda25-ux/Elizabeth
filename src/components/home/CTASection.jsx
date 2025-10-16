@@ -13,7 +13,7 @@ const CTASection = () => {
         <div className="cta__content">
           <h2 className="cta__title">Ready to Learn More?</h2>
           <p className="cta__subtitle">
-            Schedule a tour to see our homes, meet our staff, and discover how we can support your loved one.
+            Schedule a tour to see our homes, meet our staff, and discover how we can support your loved ones.
           </p>
           <div className="cta__actions">
             <Button
@@ -41,10 +41,6 @@ const CTASection = () => {
           <div className="cta__info-item">
             <h3 className="cta__info-title">No Obligation</h3>
             <p className="cta__info-text">Tours and consultations are always free</p>
-          </div>
-          <div className="cta__info-item">
-            <h3 className="cta__info-title">24/7 Available</h3>
-            <p className="cta__info-text">Emergency support available around the clock</p>
           </div>
         </div>
       </div>

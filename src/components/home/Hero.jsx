@@ -8,14 +8,19 @@ const Hero = () => {
 
   return (
     <section className="hero">
-      <div className="hero__background"></div>
+      <div
+        className="hero__background"
+        style={{
+          backgroundImage: `url(${process.env.PUBLIC_URL}/main-hero.png)`
+        }}
+      ></div>
       <div className="hero__content container">
         <div className="hero__text">
           <h1 className="hero__title">
             Compassionate Care, Meaningful Living
           </h1>
           <p className="hero__subtitle">
-            Providing a warm, supportive home environment for adults with intellectual
+            Providing a warm, supportive home environment for people with intellectual
             and developmental disabilities in Florida
           </p>
           <div className="hero__actions">

@@ -2,13 +2,15 @@ import React from 'react';
 import Card from '../common/Card';
 import './FacilityCard.css';
 
-const FacilityCard = ({ name, address, city, state, zip, bedrooms, bathrooms, capacity, features }) => {
+const FacilityCard = ({ name, address, city, state, zip, bedrooms, bathrooms, capacity, features, image }) => {
   return (
     <Card padding="none" className="facility-card">
       <div className="facility-card__image">
-        <div className="facility-card__image-placeholder">
-          <span className="facility-card__label">{name}</span>
-        </div>
+        <img
+          src={image || '/home-exterior-1.jpg'}
+          alt={`${name} - Residential facility exterior`}
+          className="facility-card__photo"
+        />
       </div>
       <div className="facility-card__content">
         <h3 className="facility-card__title">{name}</h3>

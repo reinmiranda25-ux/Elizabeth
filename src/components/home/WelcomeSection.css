@@ -36,28 +36,13 @@
   justify-content: center;
 }
 
-.welcome__image-placeholder {
+.welcome__image-photo {
   width: 100%;
-  aspect-ratio: 4 / 3;
-  background: linear-gradient(135deg, #e0f2f7 0%, #b8dce6 100%);
+  height: auto;
   border-radius: var(--border-radius-lg);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: var(--color-primary);
-  font-size: var(--font-size-lg);
-  font-weight: var(--font-weight-medium);
-  padding: var(--spacing-xl);
-  text-align: center;
   box-shadow: var(--shadow-lg);
-}
-
-.welcome__image-caption {
-  margin-top: var(--spacing-md);
-  font-size: var(--font-size-sm);
-  color: var(--color-primary-dark);
-  font-weight: var(--font-weight-normal);
+  object-fit: cover;
+  aspect-ratio: 4 / 3;
 }
 
 /* Responsive */

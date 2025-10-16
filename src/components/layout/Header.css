@@ -25,7 +25,9 @@
 /* Logo */
 .header__logo {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--spacing-3);
   text-decoration: none;
   color: var(--color-text-primary);
   transition: opacity var(--transition-fast);
@@ -33,6 +35,17 @@
 
 .header__logo:hover {
   opacity: 0.8;
+}
+
+.header__logo-image {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+.header__logo-text-container {
+  display: flex;
+  flex-direction: column;
 }
 
 .header__logo-text {
@@ -232,6 +245,11 @@
   .header__inner {
     padding-top: var(--spacing-lg);
     padding-bottom: var(--spacing-lg);
+  }
+
+  .header__logo-image {
+    width: 56px;
+    height: 56px;
   }
 
   .header__nav {

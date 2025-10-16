@@ -43,8 +43,15 @@ const Header = () => {
         <div className="header__inner">
           {/* Logo */}
           <Link to="/" className="header__logo" onClick={closeMenu}>
-            <span className="header__logo-text">Elizabeth</span>
-            <span className="header__logo-subtitle">Group Home</span>
+            <img
+              src="/logo-header.png"
+              alt="Elizabeth Group Home Services"
+              className="header__logo-image"
+            />
+            <div className="header__logo-text-container">
+              <span className="header__logo-text">Elizabeth</span>
+              <span className="header__logo-subtitle">Group Home</span>
+            </div>
           </Link>
 
           {/* Desktop Navigation */}

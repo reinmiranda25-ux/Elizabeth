@@ -16,7 +16,7 @@ const ServicesOverview = () => {
       <div className="services-overview">
         <h2 className="services-overview__title">Services</h2>
         <p className="services-overview__subtitle">
-          Our trained <strong>Behavioral Assistants</strong> provide the following services to consumers at our group home:
+          Our trained <strong>Behavioral Assistants</strong> provide the following services to consumers at our facilities:
         </p>
         <ul className="services-overview__list">
           {services.map((service, index) => (

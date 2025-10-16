@@ -44,12 +44,11 @@ const WelcomeSection = () => {
           </div>
 
           <div className="welcome__image">
-            <div className="welcome__image-placeholder">
-              <span>Welcome Image</span>
-              <p className="welcome__image-caption">
-                Photo: Residents enjoying community activities
-              </p>
-            </div>
+            <img
+              src="/home-exterior-1.jpg"
+              alt="Elizabeth Group Home - Welcoming residential facility with accessible design"
+              className="welcome__image-photo"
+            />
           </div>
         </div>
       </div>
