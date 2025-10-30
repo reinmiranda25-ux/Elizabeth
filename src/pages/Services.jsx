@@ -57,6 +57,19 @@ const Services = () => {
         'Environmental modifications for safety',
         'Teaching alternative communication methods'
       ]
+    },
+    {
+      title: 'Vocational Support & Workforce Preparation',
+      description: 'We help residents develop job readiness skills and provide support for entering the workforce. Our program focuses on building confidence, workplace skills, and connecting residents with employment opportunities that match their abilities and interests.',
+      details: [
+        'Job readiness training and interview preparation',
+        'Workplace social skills development',
+        'Resume building and application assistance',
+        'Job coaching and on-site support',
+        'Transportation to work sites',
+        'Communication with employers',
+        'Career exploration and goal setting'
+      ]
     }
   ];
 

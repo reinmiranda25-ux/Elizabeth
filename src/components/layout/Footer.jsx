@@ -58,6 +58,7 @@ const Footer = () => {
               <li>Respite (under 21)</li>
               <li>Life Skills Development 1 (Companion)</li>
               <li>Behavior Assistant Services</li>
+              <li>Vocational Support & Workforce Preparation</li>
             </ul>
           </div>
 
@@ -87,6 +88,8 @@ const Footer = () => {
             <Link to="/privacy" className="footer__link">Privacy Policy</Link>
             <span className="footer__divider">|</span>
             <Link to="/terms" className="footer__link">Terms of Service</Link>
+            <span className="footer__divider">|</span>
+            <Link to="/resident-privacy-rights" className="footer__link">Resident Privacy Rights</Link>
           </div>
         </div>
       </div>

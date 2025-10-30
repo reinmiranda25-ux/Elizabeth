@@ -6,37 +6,20 @@ import './Homes.css';
 const Homes = () => {
   const facilities = [
     {
-      name: '[Facility Name 1]',
-      address: '[Street Address]',
-      city: '[City]',
+      name: 'Elizabeth Foster Home',
+      address: '8628 Magnolia Drive',
+      city: 'Seminole',
       state: 'FL',
-      zip: '[ZIP]',
-      bedrooms: 3,
+      zip: '33777',
+      bedrooms: 2,
       bathrooms: 2,
-      capacity: '6 residents',
+      capacity: '3 residents',
       features: [
         'Private and semi-private bedrooms',
         'Spacious common areas',
         'Fully accessible',
         'Outdoor recreation space',
         'Modern kitchen and dining area'
-      ]
-    },
-    {
-      name: '[Facility Name 2]',
-      address: '[Street Address]',
-      city: '[City]',
-      state: 'FL',
-      zip: '[ZIP]',
-      bedrooms: 3,
-      bathrooms: 2,
-      capacity: '6 residents',
-      features: [
-        'Large double occupancy bedrooms',
-        'Entertainment and recreation room',
-        'Sensory-friendly design',
-        'Secure outdoor area',
-        'Updated facilities'
       ]
     }
   ];
@@ -57,8 +40,8 @@ const Homes = () => {
       <Section background="white">
         <div className="homes-intro">
           <p>
-            Elizabeth Group Home operates [NUMBER] licensed facilities throughout [LOCATION], Florida.
-            Each home is designed to provide a comfortable, safe environment where residents can thrive.
+            Elizabeth Group Home operates 1 licensed facility in Seminole, Florida.
+            Our home is designed to provide a comfortable, safe environment where residents can thrive.
           </p>
         </div>
 
@@ -97,6 +80,10 @@ const Homes = () => {
             <div className="amenity-item">
               <h3>Internet & Connectivity</h3>
               <p>WiFi access throughout the home for communication and entertainment</p>
+            </div>
+            <div className="amenity-item">
+              <h3>Phone Access</h3>
+              <p>Landline phone available for residents to stay connected with family and friends</p>
             </div>
           </div>
         </div>

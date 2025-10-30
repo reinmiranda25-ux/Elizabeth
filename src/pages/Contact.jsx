@@ -98,8 +98,8 @@ const Contact = () => {
                 <div className="contact-detail-item">
                   <h3>Address</h3>
                   <p className="contact-address">
-                    [Street Address]<br />
-                    [City], FL [ZIP Code]
+                    8628 Magnolia Drive<br />
+                    Seminole, FL 33777
                   </p>
                 </div>
 
