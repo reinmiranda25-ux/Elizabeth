@@ -97,6 +97,7 @@
   justify-content: center;
   font-size: var(--font-size-lg);
   font-weight: 700;
+  margin-right: 7px;
 }
 
 .admission-step__content {

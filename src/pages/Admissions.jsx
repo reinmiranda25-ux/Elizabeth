@@ -75,6 +75,7 @@ const Admissions = () => {
           </div>
 
           <div className="admissions-section">
+            <br />
             <h2>How to Apply</h2>
             <p>
               Our admission process is designed to ensure that we can provide the right level of care
