@@ -7,10 +7,10 @@ const Homes = () => {
   const facilities = [
     {
       name: 'Elizabeth Foster Home',
-      address: '8628 Magnolia Drive',
-      city: 'Seminole',
+      address: '7075 65th Way N',
+      city: 'Pinellas Park',
       state: 'FL',
-      zip: '33777',
+      zip: '33781',
       bedrooms: 2,
       bathrooms: 2,
       capacity: '3 residents',
@@ -40,7 +40,7 @@ const Homes = () => {
       <Section background="white">
         <div className="homes-intro">
           <p>
-            Elizabeth Group Home operates 1 licensed facility in Seminole, Florida.
+            Elizabeth Group Home operates 1 licensed facility in Pinellas Park, Florida.
             Our home is designed to provide a comfortable, safe environment where residents can thrive.
           </p>
         </div>

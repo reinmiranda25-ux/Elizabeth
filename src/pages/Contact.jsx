@@ -98,8 +98,8 @@ const Contact = () => {
                 <div className="contact-detail-item">
                   <h3>Address</h3>
                   <p className="contact-address">
-                    8628 Magnolia Drive<br />
-                    Seminole, FL 33777
+                    7075 65th Way N<br />
+                    Pinellas Park, FL 33781
                   </p>
                 </div>
 

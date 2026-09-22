@@ -133,7 +133,7 @@ const Terms = () => {
                 <a href="mailto:frencismiranda@gmail.com" className="legal-link">frencismiranda@gmail.com</a>
               </li>
               <li>
-                <strong>Address:</strong> 8628 Magnolia Drive, Seminole, FL 33777
+                <strong>Address:</strong> 7075 65th Way N, Pinellas Park, FL 33781
               </li>
             </ul>
           </div>
