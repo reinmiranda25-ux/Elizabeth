@@ -11,9 +11,10 @@ const Homes = () => {
       city: 'Pinellas Park',
       state: 'FL',
       zip: '33781',
-      bedrooms: 2,
+      bedrooms: 4,
       bathrooms: 2,
-      capacity: '3 residents',
+      capacity: '6 residents',
+      image: '/home-exterior-7075.jpg',
       features: [
         'Private and semi-private bedrooms',
         'Spacious common areas',

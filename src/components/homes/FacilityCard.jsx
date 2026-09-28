@@ -6,8 +6,7 @@ const FacilityCard = ({ name, address, city, state, zip, bedrooms, bathrooms, ca
   return (
     <Card padding="none" className="facility-card">
       <div className="facility-card__image">
-        <iframe src="https://www.youtube.com/embed/_Ulr2cHA4C8" title="Magnolia Tour" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
-
+        <img src={image} alt={`${name} at ${address}, ${city}`} className="facility-card__photo" />
       </div>
       <div className="facility-card__content">
         <h3 className="facility-card__title">{name}</h3>
