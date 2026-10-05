@@ -6,7 +6,7 @@ import './Homes.css';
 const Homes = () => {
   const facilities = [
     {
-      name: 'Elizabeth Foster Home',
+      name: 'Elizabeth Group Home',
       address: '7075 65th Way N',
       city: 'Pinellas Park',
       state: 'FL',
