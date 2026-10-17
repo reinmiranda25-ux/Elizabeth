@@ -1,6 +1,7 @@
 import React from 'react';
 import Section from '../components/common/Section';
 import FacilityCard from '../components/homes/FacilityCard';
+import VirtualTour from '../components/homes/VirtualTour';
 import './Homes.css';
 
 const Homes = () => {
@@ -51,6 +52,11 @@ const Homes = () => {
             <FacilityCard key={index} {...facility} />
           ))}
         </div>
+      </Section>
+
+      {/* Virtual Tour */}
+      <Section id="tour" className="virtual-tour-section">
+        <VirtualTour />
       </Section>
 
       {/* Amenities Section */}

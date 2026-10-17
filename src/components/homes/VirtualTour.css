@@ -1,0 +1,225 @@
+.section.virtual-tour-section {
+  background: linear-gradient(180deg, #1c2a30 0%, #131d21 100%);
+  color: var(--color-white);
+}
+
+.virtual-tour__header {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto var(--spacing-2xl);
+}
+
+.virtual-tour__eyebrow {
+  display: inline-block;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-secondary);
+  margin-bottom: var(--spacing-sm);
+}
+
+.virtual-tour__title {
+  font-size: var(--font-size-4xl);
+  color: var(--color-white);
+  margin-bottom: var(--spacing-md);
+}
+
+.virtual-tour__subtitle {
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-relaxed);
+  color: rgb(255 255 255 / 0.72);
+  margin: 0;
+}
+
+.virtual-tour__stage {
+  position: relative;
+  max-width: 1080px;
+  margin: 0 auto;
+  aspect-ratio: 16 / 9;
+  background: #000;
+  border-radius: var(--border-radius-xl);
+  overflow: hidden;
+  box-shadow: 0 30px 80px -20px rgb(0 0 0 / 0.6), 0 0 0 1px rgb(255 255 255 / 0.08);
+}
+
+.virtual-tour__stage video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.virtual-tour__label {
+  position: absolute;
+  top: var(--spacing-md);
+  left: var(--spacing-md);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-xs) var(--spacing-md);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.04em;
+  color: var(--color-white);
+  background: rgb(0 0 0 / 0.55);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgb(255 255 255 / 0.15);
+  border-radius: var(--border-radius-full);
+  pointer-events: none;
+}
+
+.virtual-tour__label-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--color-secondary);
+}
+
+.virtual-tour__play {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-md);
+  width: 100%;
+  font: inherit;
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.04em;
+  color: var(--color-white);
+  text-shadow: 0 1px 8px rgb(0 0 0 / 0.7);
+  background: linear-gradient(180deg, rgb(0 0 0 / 0.1) 0%, rgb(0 0 0 / 0.45) 100%);
+  border: 0;
+  cursor: pointer;
+}
+
+.virtual-tour__play-icon {
+  position: relative;
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  background: rgb(255 255 255 / 0.95);
+  box-shadow: 0 10px 30px rgb(0 0 0 / 0.35);
+  transition: transform var(--transition-base);
+}
+
+.virtual-tour__play-icon::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 54%;
+  transform: translate(-50%, -50%);
+  border-style: solid;
+  border-width: 14px 0 14px 22px;
+  border-color: transparent transparent transparent var(--color-primary-dark);
+}
+
+.virtual-tour-section *:focus-visible {
+  outline-color: var(--color-secondary);
+}
+
+.virtual-tour__play:focus-visible {
+  outline-offset: -6px;
+}
+
+.virtual-tour__play:hover .virtual-tour__play-icon,
+.virtual-tour__play:focus-visible .virtual-tour__play-icon {
+  transform: scale(1.08);
+}
+
+.virtual-tour__timeline {
+  list-style: none;
+  display: flex;
+  gap: var(--spacing-sm);
+  max-width: 1080px;
+  margin: var(--spacing-lg) auto 0;
+  padding: 0;
+}
+
+.virtual-tour__timeline li {
+  flex: 1 1 0;
+  min-width: 0;
+  margin: 0;
+}
+
+.virtual-tour__room {
+  width: 100%;
+  min-height: 44px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-xs) 0;
+  font: inherit;
+  text-align: left;
+  color: rgb(255 255 255 / 0.6);
+  background: none;
+  border: 0;
+  cursor: pointer;
+  transition: color var(--transition-fast);
+}
+
+.virtual-tour__room:hover,
+.virtual-tour__room.is-active {
+  color: var(--color-white);
+}
+
+.virtual-tour__bar {
+  display: block;
+  height: 4px;
+  border-radius: var(--border-radius-full);
+  background: rgb(255 255 255 / 0.18);
+  overflow: hidden;
+}
+
+.virtual-tour__bar span {
+  display: block;
+  height: 100%;
+  background: var(--color-secondary);
+  transform-origin: left;
+  transition: transform 250ms linear;
+}
+
+.virtual-tour__room-name {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.3;
+}
+
+.virtual-tour__room-num {
+  margin-right: var(--spacing-xs);
+  color: var(--color-secondary);
+  font-weight: var(--font-weight-semibold);
+}
+
+@media (max-width: 768px) {
+  .virtual-tour__title {
+    font-size: var(--font-size-3xl);
+  }
+
+  /* Phones: show the upright footage full width and trim the blurred side fill */
+  .virtual-tour__stage {
+    aspect-ratio: 9 / 16;
+    width: min(100%, calc(78vh * 9 / 16));
+    border-radius: var(--border-radius-lg);
+  }
+
+  .virtual-tour__play-icon {
+    width: 64px;
+    height: 64px;
+  }
+
+  .virtual-tour__timeline {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--spacing-md) var(--spacing-sm);
+  }
+}
+
+@media (max-width: 420px) {
+  .virtual-tour__timeline {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
