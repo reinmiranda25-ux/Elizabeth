@@ -5,6 +5,7 @@ import './VirtualTour.css';
 const PLAY_MS = 750; // auto-advance speed for "Play tour"
 const HOLD_MS = 200; // stepping speed while holding the right side
 const HOLD_DELAY_MS = 350;
+const STRIP_IDLE_MS = 4000; // leave the room bubbles alone this long after the visitor scrolls them
 
 const photoPath = (file) => `${process.env.PUBLIC_URL}/tour/photos/${file}`;
 
@@ -28,8 +29,14 @@ const VirtualTour = () => {
   const roomRefs = useRef([]);
   const hold = useRef({ timeout: null, interval: null, active: false, dir: 1 });
   const touchX = useRef(null);
+  const lastRoom = useRef(-1);
+  const stripTouched = useRef(0); // when the visitor last scrolled the room bubbles
 
   const slide = slides[current];
+
+  const markStrip = () => {
+    stripTouched.current = Date.now();
+  };
 
   const go = useCallback((i) => setCurrent(clamp(i)), []);
   const step = useCallback((delta) => setCurrent((c) => clamp(c + delta)), []);
@@ -65,12 +72,17 @@ const VirtualTour = () => {
     if (img.complete && img.naturalWidth) paint();
     else img.decode().then(paint, paint);
 
-    // Keep the active room visible in the strip without scrolling the page
+    // When the tour enters a new room, bring its bubble into view (without scrolling the page),
+    // unless the visitor is browsing the bubbles themselves
+    const room = slides[current].room;
     const list = listRef.current;
-    const li = roomRefs.current[slides[current].room];
-    if (list && li && (li.offsetLeft < list.scrollLeft || li.offsetLeft + li.offsetWidth > list.scrollLeft + list.clientWidth)) {
+    const li = roomRefs.current[room];
+    const browsing = Date.now() - stripTouched.current < STRIP_IDLE_MS;
+    if (room !== lastRoom.current && !browsing && list && li &&
+        (li.offsetLeft < list.scrollLeft || li.offsetLeft + li.offsetWidth > list.scrollLeft + list.clientWidth)) {
       list.scrollTo({ left: li.offsetLeft - list.clientWidth / 2 + li.offsetWidth / 2, behavior: 'smooth' });
     }
+    lastRoom.current = room;
 
     if (current === LAST) setPlaying(false);
     // Stop a hold once it reaches the start or end of the tour
@@ -246,7 +258,14 @@ const VirtualTour = () => {
         </div>
       </div>
 
-      <ol className="virtual-tour__timeline" ref={listRef}>
+      <ol
+        className="virtual-tour__timeline"
+        ref={listRef}
+        onTouchStart={markStrip}
+        onTouchMove={markStrip}
+        onWheel={markStrip}
+        onPointerDown={markStrip}
+      >
         {tour.map((room, ri) => {
           const fill = ri < slide.room ? 1 : ri > slide.room ? 0 : (slide.n + 1) / room.photos.length;
           const active = ri === slide.room;
